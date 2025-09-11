@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.30)
-
+include(cmake/warning.cmake)
 
 if (NOT DEFINED CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD 23)
@@ -9,7 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 
 project(
-    bounty_of_two
+    project
     VERSION 0.0.1
     DESCRIPTION ""
     HOMEPAGE_URL ""
@@ -25,6 +25,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 # unsupported experimental flags like -fmodules-ts with some GCC/MinGW builds.
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
+include(cmake/version.cmake)
 include(Dependencies.cmake)
 
 # Add source tree
